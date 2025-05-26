@@ -18,3 +18,7 @@ describe(distance)
 
 demo= cbind(arr_delay, dep_delay, distance)
 describe(demo)
+
+
+library(psych)
+?describe

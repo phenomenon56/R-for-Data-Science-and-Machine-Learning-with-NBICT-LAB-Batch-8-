@@ -77,3 +77,42 @@ n_accessory
 
 
 n_accessory / ngenomes
+
+
+# Visualize the distribution of gene presence in a gene family (distribution of core to accessory genes)
+
+# Prepare dataframe for plotting
+gene_fam_totals <-as.data.frame(PIRATE.gene_families$number_genomes)
+
+colnames(gene_fam_totals) <- 'count'
+
+# Categorize gene groups
+gene_fam_totals$group = 0
+
+for (i in 1:nrow(gene_fam_totals)){  
+  if (gene_fam_totals$count[i] == 1) {
+    gene_fam_totals$group[i] = "Singleton"  
+  } else if (gene_fam_totals$count[i] >= .95*ngenomes){
+    gene_fam_totals$group[i] = "Core"  
+  } else {
+    gene_fam_totals$group[i] = "Accessory"  
+  }
+}
+
+p1 <- gene_fam_totals %>%  ggplot(aes(x = count)) +  
+  geom_bar(aes(fill = group), position = "identity") +  
+  ggtitle("Pangenome Distribution by gene ortholog group") +  
+  ylab("n gene families") + 
+  xlab("n genomes in family") +  
+  theme_classic() +  
+  theme(plot.title = element_text(size=15), legend.title = element_blank(), legend.position.inside = c(0.85, 0.85)) +  
+  scale_fill_manual(name = "", values = c("blueviolet", "coral",  "darkcyan")) +          
+  theme_minimal()
+p1
+
+# Compute percentages
+fam_dist_df$fraction <- fam_dist_df$count / sum(fam_dist_df$count)
+
+
+
+

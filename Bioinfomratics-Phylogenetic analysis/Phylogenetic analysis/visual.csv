@@ -1,0 +1,8 @@
+Strain,Source,Susceptiblity,Country,Acc no.,Year
+ERR10359916_contigs,human,MDR,Bangladesh,12345,2008
+ERR10359918_contigs,animal,MDR,India,54321,2012
+ERR10359921_contigs,animal,PDR,Pakistan,88988,2006
+ERR10359938_contigs,environment,PDR,Pakistan,17025,2012
+ERR10359946_contigs,human,NR,India,47591,2006
+ERR10359954_contigs,environment,MDR,Bangladesh,43190,2008
+ERRiiiiiiiiiiiii_contigs,environment,NR,Afghanistan,33133,1994

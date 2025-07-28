@@ -1,0 +1,8 @@
+Strain,Country,Source,Susceptiblity,Year
+Strain1,USA,human,MDR,1995
+Strain2,UK,animal,PDR,2000
+Strain3,India,human,NR,2005
+Strain4,Pakistan,environment,MDR,1995
+Strain5,Bangladesh,human,NR,2010
+Strain6,Afghanistan,animal,MDR,2000
+Strain7,Nepal,environment,PDR,2005

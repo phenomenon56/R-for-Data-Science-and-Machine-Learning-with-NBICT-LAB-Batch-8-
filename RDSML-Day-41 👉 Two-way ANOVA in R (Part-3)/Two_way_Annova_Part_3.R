@@ -66,9 +66,8 @@ library
 # install.packages("multcompView")
 library(multcomp)
 library(multcompView)
-library(emmeans)
-library(emmeans) 
-library(multcomp)
+
+
 group_letters <- cld(emmeans(m, ~ fert * irr), Letters = letters)
 print(group_letters)
 

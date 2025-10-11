@@ -6,7 +6,8 @@ dataset = read.csv("Salary_Data.csv")
 library(caTools)
 
 # Splitting the dataset into the Training set and Test set
-# Training set: Input the dataset through which machine is trained
+# Training set: Input the dataset through which machine is trained (Model)
+# Test Set: 
 # Splitting the training set into Two ways: 
 # 1.Randomly
 split = sample.split(dataset$Salary, SplitRatio = 2/3)
@@ -17,7 +18,7 @@ set.seed(123) #to avoid randomness
 split = sample.split(dataset$Salary, SplitRatio = 2/3)
 split
 
-# Training set preparation
+# Training set preparation (Model)
 training_set <- subset(dataset, split == TRUE) #two equal means equal, one equal means assignment operator
 
 # Test Set Preparation

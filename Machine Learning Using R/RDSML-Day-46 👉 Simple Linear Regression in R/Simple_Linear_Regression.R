@@ -7,7 +7,7 @@ library(caTools)
 
 # Splitting the dataset into the Training set and Test set
 # Training set: Input the dataset through which machine is trained (Model)
-# Test Set: 
+# Test Set:  Input the dataset which is tested on basis of model
 # Splitting the training set into Two ways: 
 # 1.Randomly
 split = sample.split(dataset$Salary, SplitRatio = 2/3)
